@@ -1,5 +1,8 @@
 package second;
 
+/**
+ * 变量的生效范围是他声明位置的最近一层的代码块
+ */
 public class Practice3 {
 
     public static void main(String[] args) {
