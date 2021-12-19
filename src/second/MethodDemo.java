@@ -14,7 +14,7 @@ package second;
  * 参数可以是多个，用逗号隔开，使用时有顺序,这多个参数的数据类型是可以不一样的
  * return 返回值
  * 方法声明在类内方法外
- * 
+ * void关键词，不返回
  * 
  * 使用
  * 在同一个类中，静态方法可以直接调用
@@ -24,22 +24,23 @@ package second;
  * 
  * 变量的生命周期
  * 变量的生命周期是他声明位置最近的大括号范围内
+ * 
+ * 使用方法的好处
+ * 增强可读性
+ * 避免重复（DRY）
  */
 public class MethodDemo {
     
-    static int power(int[] array, int index){
+    static void power(int i){
 
-        int result = array[index];
+        int result = i * i;
 
-        return result;
+        System.out.println(result);
     } 
 
     public static void main(String[] args) {
         
-        int[] array = {1,2,3};
-
-        int i = power(array,2);
-        System.out.println(i);
+        power(9);
 
     }
 

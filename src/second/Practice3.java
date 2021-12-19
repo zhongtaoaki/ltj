@@ -10,24 +10,21 @@ public class Practice3 {
         int count = 0;
 
         for (int number = 2; number < 2000; number++) {
-
-            boolean a = true;
-
-            for (int i = 2; i < number; i++) {
-
-                if (number % i == 0) {
-                    a = false;
-                    break;
-                }
-            }
-            if (a) {
-                System.out.println(number + "是素数");
+            //判断number是否为素数
+            if (isPrime(number)) {
+                System.out.println(number);
                 count++;
             }
-
         }
-
         System.out.println("素数的数量为:" + count);
     }
 
+    static boolean isPrime(int number){
+        for (int i = 2; i < number; i++) {
+            if (number%i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
