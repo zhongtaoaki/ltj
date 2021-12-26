@@ -16,7 +16,7 @@ public class PackageDemo {
         int i = scanner.nextInt();
         System.out.println(i*i);
 
-        String s ;
+        scanner.close();
        
     }
 

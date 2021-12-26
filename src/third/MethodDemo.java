@@ -24,49 +24,49 @@ package third;
  */
 public class MethodDemo {
 
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
 
-        Cat a = new Cat("张二狗", 2, false);
-        Cat b = new Cat("鸡腿", 4, true);
+    //     Cat a = new Cat("张二狗", 2, false);
+    //     Cat b = new Cat("鸡腿", 4, true);
 
-        Cat c = new Cat();
-        c.name = "other";
-        c.age = 1;
-        c.gender = true;
+    //     Cat c = new Cat();
+    //     c.name = "other";
+    //     c.age = 1;
+    //     c.gender = true;
 
-        a.name = "2132";
-        a.catchMouse();
-        b.catchMouse();
+    //     a.name = "2132";
+    //     a.catchMouse();
+    //     b.catchMouse();
 
-    }
-
-}
-
-class Cat {
-
-    Cat() {
-    }
-
-    // 这是一个构造器
-    Cat(String name) {
-        this.name = name;
-    }
-
-    Cat(String name, int age, boolean gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.count ++;
-    }
-
-    String name;
-    int age;
-    boolean gender;
-    static int count = 0 ;
-
-    void catchMouse() {
-        System.out.println(name + "已经开始抓老鼠了。");
-
-    }
+    // }
 
 }
+
+// class Cat {
+
+//     Cat() {
+//     }
+
+//     // 这是一个构造器
+//     Cat(String name) {
+//         this.name = name;
+//     }
+
+//     Cat(String name, int age, boolean gender) {
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//         this.count ++;
+//     }
+
+//     String name;
+//     int age;
+//     boolean gender;
+//     static int count = 0 ;
+
+//     void catchMouse() {
+//         System.out.println(name + "已经开始抓老鼠了。");
+
+//     }
+
+// }
