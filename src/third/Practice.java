@@ -4,7 +4,7 @@ public class Practice {
 
     // 练习一；阶乘
     static int fact(int number) {
-        int result = 1;
+       int result = 1;
         for (int i = 1; i <= number; i++) {
             result *= i;
         }
@@ -22,7 +22,7 @@ public class Practice {
     }
 
     // 练习三：计算器
-    static String caculate(int first, char operator, int second) {
+    static String calculator(int first, char operator, int second) {
 
         switch (operator) {
             case '+':
@@ -45,7 +45,10 @@ public class Practice {
     public static void main(String[] args) {
         System.out.println(fact(5));
         System.out.println(digitSum(828));
-        System.out.println(caculate(1, '1', 0));
+
+        System.out.println(calculator(1, '+', 1));
+        System.out.println("1" + "1");
+
     }
 
 }

@@ -23,22 +23,20 @@ public class ObjectDemo {
     public static void main(String[] args) {
         //抓猫
 
-        int i = 1;
-
         //生成一只新的猫
-        Cat a = new Cat();
-        a.age = 1;
-        a.gender = true;
-        System.out.println(a.age);
-        System.out.println(a.gender);
+        // Cat a = new Cat();
+        // a.age = 1;
+        // a.gender = true;
+        // System.out.println(a.age);
+        // System.out.println(a.gender);
 
     }
 
 }
 
-class Cat{
-    int age;
-    boolean gender;
-}
+// class Cat{
+//     int age;
+//     boolean gender;
+// }
 
 
