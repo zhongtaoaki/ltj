@@ -6,11 +6,11 @@ public class Fraction {
     private int denominator;// 分母
 
     // 无参空构造
-    Fraction() {
+    public Fraction() {
     }
 
     // 有参构造，分母不为零
-    Fraction(int numerator, int denominator) {
+    public Fraction(int numerator, int denominator) {
         if (denominator == 0) {
             System.out.println("分母不能为0");
         } else {
@@ -33,7 +33,15 @@ public class Fraction {
 
     // 约分
     public Fraction reduction() {
-        int smaller = numerator > denominator ? denominator : numerator;
+        // 三目运算
+        // int smaller = numerator > denominator ? denominator : numerator;
+        int smaller;
+        if (numerator > denominator) {
+            smaller = denominator;
+        } else {
+            smaller = numerator;
+        }
+
         while (numerator % smaller != 0 || denominator % smaller != 0) {
             smaller--;
         }
