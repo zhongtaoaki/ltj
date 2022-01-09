@@ -53,6 +53,7 @@ public class Fraction {
     public static void main(String[] args) {
         Fraction f1 = new Fraction(1, 3);
         Fraction f2 = new Fraction(3, 4);
+        System.out.println(1/0);
         System.out.println(f1.multiple(f2).reduction().toString());
 
     }

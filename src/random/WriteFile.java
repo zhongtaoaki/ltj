@@ -24,10 +24,10 @@ public class WriteFile {
         List<Bean> list = new ArrayList<>();
         list.add(new Bean("徐同学", 1));
         list.add(new Bean("冯同学", 1));
-        list.add(new Bean("鹤达同学", 1));
+        //list.add(new Bean("鹤达同学", 1));
         list.add(new Bean("杨同学", 1));
         list.add(new Bean("王同学", 1));
-        list.add(new Bean("陈同学", 1));
+        //list.add(new Bean("陈同学", 1));
         list.add(new Bean("孙同学", 1));
         list.add(new Bean("秦同学", 1));
 
