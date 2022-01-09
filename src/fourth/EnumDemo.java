@@ -51,7 +51,7 @@ enum Season {
 
     public String chinese;
 
-    Season(String chinese) {
+    private Season(String chinese) {
         this.chinese = chinese;
     }
 
