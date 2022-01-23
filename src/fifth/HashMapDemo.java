@@ -1,5 +1,6 @@
 package fifth;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -27,6 +28,11 @@ public class HashMapDemo {
 		for (Country i : ketSet) {
 			System.out.println(i + ": " + studentMap.get(i));
 		}
+
+		HashMap<String, ArrayList<String>> anime = new HashMap<>();
+		ArrayList<String> anime1 = new ArrayList<String>();
+		anime1.add("s");
+		anime.put("a",anime1); 
 
 	}
 }

@@ -1,9 +1,13 @@
 package sixth;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class ForEachDemo {
 	public static void main(String[] args) {
@@ -18,10 +22,47 @@ public class ForEachDemo {
 
 		// Comparator<Student> comparator = (s1, s2) -> s1.age - s2.age;
 
-		// 插入5个学生，把男生按照年龄从小到大排序，并打印出来名字和年龄
-		list.stream().filter(n -> n.gender == 1).sorted((s1, s2) -> s1.age - s2.age)
-				.forEach(n -> System.out.println(n));
+		File file = new File("test.txt");
+		try {
+			file.deleteOnExit();
+			if (file.createNewFile()) {
+				System.out.println("文件成功创建");
+			}
+
+			FileWriter fWriter = new FileWriter(file);
+			BufferedWriter bWriter = new BufferedWriter(fWriter);
+
+			// 插入5个学生，把男生按照年龄从小到大排序，并打印出来名字和年龄
+			list.stream().filter(n -> n.gender == 1)//
+					.sorted((s1, s2) -> s1.age - s2.age)//
+					.forEach(n -> {
+						try {
+							bWriter.write(n.toString());
+							bWriter.newLine();
+
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					});
+
+			bWriter.close();
+			fWriter.close();
+
+			BufferedReader bReader = new BufferedReader(new FileReader(file));
+			String string = "";
+			while (string != null) {
+				if (string != "") {
+					System.out.println(string);
+				}
+				string = bReader.readLine();
+			}
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
 	}
+}
 
 //	@Override
 //	public int compare(Object o1, Object o2) {
@@ -37,7 +78,6 @@ public class ForEachDemo {
 //
 //		return s1.age - s2.age;
 //	}
-}
 
 class Student {
 	public String name;

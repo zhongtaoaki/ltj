@@ -30,11 +30,13 @@ public class ExtendsDemo {
     }
 }
 
-abstract class Animal {
+ class Animal {
     public int weight;
     public String name;
     public int age;
-    abstract void bite();
+     void bite(){
+
+     };
 }
 
 //实体类
