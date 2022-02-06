@@ -29,9 +29,9 @@ public class DbTest {
 			statement = connection.createStatement();
 			String sql = "select * from student;";
 			result = statement.executeQuery(sql);
+			System.out.println("数据库查询成功");
 
 			while (result.next()) {
-				System.out.println("数据库查询成功");
 				students.add(new Student(result.getInt(1), result.getString(2), result.getInt(3)));
 			}
 
