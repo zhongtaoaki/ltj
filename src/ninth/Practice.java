@@ -17,7 +17,7 @@ public class Practice {
 		System.out.println(getTimes(string));
 		// "w:1 r:2 o:4 n:1 l:6 h:1 e:2 d:3 a:1 W:1 H:1"
 		
-		//拓展：能否做到忽略大小写？
+		//拓展：能否做到忽略大小写
 
 	}
 
