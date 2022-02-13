@@ -1,5 +1,10 @@
 package ninth;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Practice {
 
 	public static void main(String[] args) {
@@ -16,14 +21,43 @@ public class Practice {
 		// 提示：List<Character> arrayList = new ArrayList<>(set);（可将Set转化成ArrayList）
 		System.out.println(getTimes(string));
 		// "w:1 r:2 o:4 n:1 l:6 h:1 e:2 d:3 a:1 W:1 H:1"
-		
-		//拓展：能否做到忽略大小写
 
+		// 拓展：能否做到忽略大小写
+		System.out.println(getTimes(string));
 	}
 
 	private static String getTimes(String string) {
-		//TODO
-		return null;
-	}
 
+		String newString = string.toUpperCase();
+		
+		char ch[] = newString.toCharArray();
+
+		Map<Character, Integer> map = new HashMap<>();
+
+		for (char c : ch) {
+			if (c != ' ') {
+				if (!map.containsKey(c)) {
+					map.put(c, 1);
+				}
+				map.put(c, map.get(c) + 1);
+			}
+		}
+
+		StringBuilder sBuilder = new StringBuilder();
+
+		sBuilder.append("\"");
+
+		List<Character> list = new ArrayList<>(map.keySet());
+
+		list.stream().sorted((a, b) -> b - a).forEach(c -> {
+			sBuilder.append(c);
+			sBuilder.append(":");
+			sBuilder.append(map.get(c));
+			sBuilder.append(" ");
+		});
+		sBuilder.deleteCharAt(sBuilder.length() - 1);
+		sBuilder.append("\"");
+
+		return sBuilder.toString();
+	}
 }
