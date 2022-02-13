@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> lighthouse aki</h2>
+    <p id="myp1"></p>
+    <p id="myp2"></p>
+    <img id="pic" src="1.jpeg"><br>
+    <button id="myButton1"> 这是一个按钮 </button>
+    <button id="myButton2" onclick="window.alert('你干嘛点我');"> 这是另一个按钮 </button>
+    <button id="myButton3" onclick="myFunction2()"> 这是另一个按钮 </button>
+    <button id="myButton4"> 这是一个按钮 </button>
+
+    <script>
+        document.getElementById("myp1").innerText = "<b>Hello World</b>";
+        document.getElementById("myp2").innerHTML = "<b>Hello World</b>";
+        document.getElementById("pic").src = "2.jpeg";
+        document.getElementById("myButton1").addEventListener("click", function () {
+            window.alert("你干嘛点我");
+        });
+
+        function myFunction() {
+            window.alert("你干嘛点我");
+        };
+
+        //myFunction();
+
+        var myFunction2 = function () {
+            window.alert(Date());
+        };
+
+
+
+        console.log(1 + 2);
+
+        var a = "test";
+        var a;
+
+        var myobject = new Object();
+        myobject.name = "student";
+
+        // for (let ivar = 0; ivar < 3; ivar++) {
+        //     console.log(`varでカウントします${ivar}`);
+        // }
+
+        // console.log("forの外です" + ivar);
+
+        var array = ["boy", "girls", 12];
+
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        console.log(fruits.shift);
+        console.log(fruits.pop);
+
+        function myFunction3() {
+            console.log(arguments[0]);
+        };
+
+        $("#myButton4").click(function () {
+        alert($("#myButton4").text());
+    });
+
+
+    </script>
+</body>
+
+</html>
