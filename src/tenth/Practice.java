@@ -1,4 +1,4 @@
-package Tenth;
+package tenth;
 
 import java.util.HashMap;
 import java.util.Map;
